@@ -1,0 +1,8 @@
+nestle
+numpy
+tqdm
+joblib
+taurex
+matplotlib
+h5py
+scipy
