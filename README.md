@@ -27,13 +27,17 @@ Una volta installati, bisognerà assicurarsi di avere nella cartella del progett
 
 ## 3) Compilazione ed Output:
 
-Una volta eseguito il codice (>potrebbe impiegarci decine di minuti), si vedranno gli output nelle rispettive cartelle, e sarà possibile ottenere un quadro generale del funzionamento e della bontà dell'algoritmo.
+Una volta eseguito il codice 
+  >potrebbe impiegarci decine di minuti
+si vedranno gli output nelle rispettive cartelle, e sarà possibile ottenere un quadro generale del funzionamento e della bontà dell'algoritmo.
 
 Per avere un'idea visiva degli output, si cerca di avere la distribuzione *predetta* dei parametri **molto vicina al valore reale del parametro**, in modo da capire subito se l'algoritmo è buono o no, in base ai parametri di 'loss' e 'validation_loss'. 
 
 Essi sono visibili durante l'esecuzione dell'algoritmo, venendo stampati a schermo sul Notebook Jupyter durante l'esecuzione. In questo modo è possibile avere un doppio confronto sulla bontà del modello e dei valori dei dati risultanti.
 
-**Si presti attenzione al fatto che, essendo il DataSet fornito direttamente da ARIEL (quindi poco modificabile), ed il fatto che vi è un problema noto sui dati (>fare riferimento all'issue/discussione), si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**
+**Si presti attenzione al fatto che, essendo il DataSet fornito direttamente da ARIEL (quindi poco modificabile), ed il fatto che vi è un problema noto sui dati** 
+  >fare riferimento all'issue/discussione
+**, si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**
 
 ![Auto Assign](https://github.com/Parthenope2024/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
 ![Proof HTML](https://github.com/Parthenope2024/demo-repository/actions/workflows/proof-html.yml/badge.svg)
