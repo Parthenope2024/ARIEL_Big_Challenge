@@ -37,7 +37,7 @@ Per avere un'idea visiva degli output, si cerca di avere la distribuzione *prede
 Essi sono visibili durante l'esecuzione dell'algoritmo, venendo stampati a schermo sul Notebook Jupyter durante l'esecuzione. In questo modo è possibile avere un doppio confronto sulla bontà del modello e dei valori dei dati risultanti.
 
 **Si presti attenzione al fatto che, essendo il DataSet fornito direttamente da ARIEL (quindi poco modificabile), ed il fatto che vi è un problema noto sui dati** 
-  >fare riferimento all'issue/discussione
+  >fare riferimento all'issue/discussione [#https://github.com/orgs/Parthenope2024/discussions/4]
 **, si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**
 
 ![Auto Assign](https://github.com/Parthenope2024/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
