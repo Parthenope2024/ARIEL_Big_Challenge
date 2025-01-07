@@ -29,6 +29,7 @@ Una volta installati, bisognerà assicurarsi di avere nella cartella del progett
 
 Una volta eseguito il codice 
   >potrebbe impiegarci decine di minuti
+
 si vedranno gli output nelle rispettive cartelle, e sarà possibile ottenere un quadro generale del funzionamento e della bontà dell'algoritmo.
 
 Per avere un'idea visiva degli output, si cerca di avere la distribuzione *predetta* dei parametri **molto vicina al valore reale del parametro**, in modo da capire subito se l'algoritmo è buono o no, in base ai parametri di 'loss' e 'validation_loss'. 
