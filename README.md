@@ -38,6 +38,7 @@ Essi sono visibili durante l'esecuzione dell'algoritmo, venendo stampati a scher
 
 **Si presti attenzione al fatto che, essendo il DataSet fornito direttamente da ARIEL (quindi poco modificabile), ed il fatto che vi è un problema noto sui dati** 
   >fare riferimento all'issue/discussione [#https://github.com/orgs/Parthenope2024/discussions/4]
+
 **, si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**
 
 ![Auto Assign](https://github.com/Parthenope2024/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
