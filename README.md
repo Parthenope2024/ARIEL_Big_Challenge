@@ -39,7 +39,15 @@ Essi sono visibili durante l'esecuzione dell'algoritmo, venendo stampati a scher
 **Si presti attenzione al fatto che, essendo il DataSet fornito direttamente da ARIEL (quindi poco modificabile), ed il fatto che vi è un problema noto sui dati** 
   >fare riferimento all'issue/discussione [#https://github.com/orgs/Parthenope2024/discussions/4]
 
-**, si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**
+** si potrebbero avere output di 'Not-a-Number' o 'infinito', ma ciò non riguarda unicamente il modello**, ma bensi' *il dataset fornito da ARIEL*
+
+---
+
+## GUI Update!
+
+Ho creato una piccola Graphic User Interface per visualizzare l'output del modello.
+Il file 'GraphicInterface.py' esegue il Notebook, salva l'output in un file chiamato 'SpectralOutput.ipynb', e legge il contenuto degli output cui siamo interessati da un .csv.
+Successivamente, crea una piccola GUI per aiutarci a visualizzare i dati di output a schermo.
 
 ![Auto Assign](https://github.com/Parthenope2024/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
 ![Proof HTML](https://github.com/Parthenope2024/demo-repository/actions/workflows/proof-html.yml/badge.svg)
