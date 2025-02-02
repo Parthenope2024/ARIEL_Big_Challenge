@@ -2,6 +2,8 @@
 
 ---
 
+# Prima Parte:
+
 ## 1) Contenuto Repository:
 
 - Codice : Il codice è contenuto principalmente nel file 'SpectralData-works.ipynb', file **Notebook Jupyter**, le cui "librerie" sono nei vari file '.py' all'interno della cartella (attualmente compresso in un '.7z'.
@@ -48,6 +50,19 @@ Essi sono visibili durante l'esecuzione dell'algoritmo, venendo stampati a scher
 Ho creato una piccola Graphic User Interface per visualizzare l'output del modello.
 Il file 'GraphicInterface.py' esegue il Notebook, salva l'output in un file chiamato 'SpectralOutput.ipynb', e legge il contenuto degli output cui siamo interessati da un .csv.
 Successivamente, crea una piccola GUI per aiutarci a visualizzare i dati di output a schermo.
+
+---
+
+# Seconda Parte ('Gaussian Mixture Model'):
+
+## 1) Codice:
+Il codice e' nel file 'GMM.ipynb', visualizzabile anche mediante il file 'GMM.py'. I dati (di entrambi i file) vengono presi dai file '.npy', che verranno estratti direttamente nel codice, mediante apposite librerie
+
+## 2) Differenze con il codice originale:
+La principale differenza e' la **complessita' d'esecuzione**, che in questo file e' molto maggiore, dovendo eseguire un algoritmo *molto piu' pesante* rispetto ad un classico 'KMeans', difatti runna il ***Gaussian Mixture Model***, un algoritmo di 'Soft Clustering', che a differenza dell' 'Hard Clustering', un dato puo' appartenere **a piu' cluster**, in base ad un grado.
+
+## 3) Compilazione ed output:
+La compilazione e l'output avvengono allo stesso modo del vecchio file, ma la differenza e' che si avra' un output dopo piu' tempo e si vedranno dei plot delle distribuzioni bayesiane molto piu' complesse, in riferimento a piu' dati ecc.
 
 ![Auto Assign](https://github.com/Parthenope2024/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
 ![Proof HTML](https://github.com/Parthenope2024/demo-repository/actions/workflows/proof-html.yml/badge.svg)
