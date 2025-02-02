@@ -1,5 +1,16 @@
 # Descrizione : 
 
+- [Prima Parte:](#prima-parte-)
+  * [1) Contenuto Repository:](#1--contenuto-repository-)
+  * [2) Struttura '.ipynb':](#2--struttura--ipynb--)
+  * [3) Compilazione ed Output:](#3--compilazione-ed-output-)
+  * [GUI Update!](#gui-update-)
+- [Seconda Parte ('Gaussian Mixture Model'):](#seconda-parte---gaussian-mixture-model---)
+  * [1) Codice:](#1--codice-)
+  * [2) Differenze con il codice originale:](#2--differenze-con-il-codice-originale-)
+  * [3) Compilazione ed output:](#3--compilazione-ed-output-)
+
+
 ---
 
 # Prima Parte:
