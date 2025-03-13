@@ -59,3 +59,20 @@ def compute_spectral_loss(tr1, weights1, tr2, weights2,bounds_matrix,fm_func,q_l
     
     score = compute_score(median, bound, GT_median, GT_bound)
     return score
+
+def compute_spectral_loss_7(tr1, weights1, tr2, weights2,bounds_matrix,fm_func,q_list):
+    tr1 = restrict_to_prior(tr1, bounds_matrix)
+    q1, q2, q3 = compute_approx_mean_and_bound(tr1, weights1, fm_func, q_list)
+    q1, q2, q3 = check_output(q1, q2, q3)
+    median, bound = q2, q3 - q1 + 1e-8
+    bound = np.maximum(bound,1e-8)
+    
+    ## compute for ground truth
+    tr2 = restrict_to_prior(tr2, bounds_matrix)
+    q1_GT, q2_GT, q3_GT = compute_approx_mean_and_bound(tr2, weights2, fm_func, q_list)
+    q1_GT, q2_GT, q3_GT  = check_output(q1_GT, q2_GT, q3_GT)
+    GT_median, GT_bound = q2_GT, q3_GT - q1_GT + 1e-8
+    GT_bound = np.maximum(GT_bound,1e-8)
+    
+    score = compute_score(median, bound, GT_median, GT_bound)
+    return score

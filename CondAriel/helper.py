@@ -1,5 +1,33 @@
 import numpy as np
 
+import numpy as np
+
+import numpy as np
+
+def check_parameters_valid(params_tuple):
+    """
+    Checks if the parameters in a tuple are valid float numbers 
+    (not NaN or infinite) and not none.
+
+    Args:
+        params_tuple: A tuple containing the parameters.
+
+    Returns:
+        bool: True if all parameters are valid floats, False otherwise.
+    """
+    if params_tuple is None:
+        return False
+    for params in params_tuple:
+        if isinstance(params, np.ndarray):
+            if  np.any(np.isnan(params)) or np.any(np.isinf(params)):
+              return False
+            
+        elif isinstance(params, (float,int)):
+             if np.isnan(params) or np.isinf(params):
+                 return False
+        elif params is None:
+          return False
+    return True
 
 def to_observed_matrix(data_file,aux_file):
     # careful, orders in data files are scambled. We need to "align them with id from aux file"
@@ -40,13 +68,27 @@ def visualise_spectrum(spectrum):
     plt.xscale('log')
     plt.show()
     
-def transform_and_reshape( y_pred_valid,targets_mean, targets_std,instances,N_testdata):
-    y_pred_valid_org = transform_back(
-	y_pred_valid,
-	targets_mean.to_numpy()[None, ...],
-	targets_std.to_numpy()[None, ...]
-    )
-#    y_pred_valid_org = transform_back(y_pred_valid,targets_mean[None, ...], targets_std[None, ...])
-    y_pred_valid_org = y_pred_valid_org.reshape(instances, N_testdata, len(targets_std))
-    y_pred_valid_org = np.swapaxes(y_pred_valid_org, 1,0)
-    return y_pred_valid_org
+import numpy as np
+
+def transform_and_reshape(y_pred, mean, std, instances, N_testdata):
+    """
+    Trasforma i dati predetti alla scala originale.
+
+    Args:
+        y_pred (np.array): Dati predetti da trasformare e rimodellare.
+        mean (np.array): Valori medi originali.
+        std (np.array): Deviazioni standard originali.
+        instances (int): Numero di istanze.
+        N_testdata (int): Lunghezza dei dati di test.
+
+    Returns:
+        np.array: Dati trasformati e rimodellati.
+    """
+    # Ensure mean and std are numpy arrays
+    mean = np.array(mean.values if hasattr(mean, 'values') else mean)
+    std = np.array(std.values if hasattr(std, 'values') else std)
+    
+    # Trasformazione e reshaping
+    y_pred_transformed = y_pred * std + mean
+    y_pred_reshaped = y_pred_transformed.reshape(instances, N_testdata, -1)
+    return y_pred_reshaped
