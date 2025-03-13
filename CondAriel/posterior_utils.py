@@ -30,7 +30,7 @@ def to_matrix(data_file_gt, predicted_file, aux_df):
 
 def default_prior_bounds():
     """Prior bounds of each different molecules."""
-    '''
+
     #### check here!!!!!!####
     Rp_range = [0.1, 3]
     T_range = [0,7000]
@@ -42,24 +42,6 @@ def default_prior_bounds():
     
     bounds_matrix = np.vstack([Rp_range,T_range,gas1_range,gas2_range,gas3_range,gas4_range,gas5_range])
     return bounds_matrix
-'''
-###  BOUND MATRIX 2
-
-def default_prior_bounds():
-    # Affidandoci a https://www.aanda.org/articles/aa/full_html/2021/01/aa38361-20/aa38361-20.html
-    """Prior bounds of each different molecules."""
-    Rp_range = [0.4, 8]   # Jupiter radii (Rj) - typical hot Jupiter range
-    T_range = [4000, 7000]   # Temperature range for hot Jupiters
-    gas1_range = [-8, -3]   # log mixing ratios for H2O (more common in hot atmospheres)
-    gas2_range = [-10, -4]  # log mixing ratios for CH4 (less abundant in hot atmospheres)
-    gas3_range = [-8, -3]   # log mixing ratios for CO2
-    gas4_range = [-8, -3]   # log mixing ratios for CO (more abundant in hot atmospheres)
-    gas5_range = [-10, -4]  # log mixing ratios for NH3 (less stable at high temperatures)
-    
-    bounds_matrix = np.vstack([Rp_range, T_range, gas1_range, gas2_range, gas3_range, gas4_range, gas5_range])
-    return bounds_matrix
-
-
 
 def restrict_to_prior(arr, bounds_matrix):
     """Restrict any values within the array to the bounds given by a bounds_matrix.
@@ -94,6 +76,7 @@ def compute_posterior_loss(tr1, weight1, tr2, weight2, bounds_matrix=None):
     n_targets = tr1.shape[1]
     trace1 = preprocess_trace_for_posterior_loss(tr1, weight1, bounds_matrix)
     trace2 = preprocess_trace_for_posterior_loss(tr2, weight2, bounds_matrix)
+
     score_trace = []
     for t in range(0, n_targets):
         resampled_gt = np.resize(trace2[:,t], trace1[:,t].shape)
