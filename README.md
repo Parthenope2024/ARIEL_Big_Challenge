@@ -12,12 +12,16 @@
 La repository contiene varie cartelle:
 - GMM_plots : Plot dell'algoritmo con doppio clustering
 - outputs : risultati dell'algoritmo (.hdf5)
-- 
+- Clusters : Dimensioni e distribuzioni dei cluster e dei risultati del clustering (pianeti categorizzati)
+- Grafici Clustering : Grafici dell'andamento degli score risultanti dal clustering
+- `GaussianMixtureModel.ipynb` : Notebook principale per l'esecuzione dell'algoritmo
+- `GUI.py` : Interfaccia grafica per la semplificazione visiva dei risultati
+- `outputs.csv` : File contenente i risultati, base per la generazione dei grafici
   
 ---
 
 # PrimaParte :
-> Clustering basilare
+> Clustering *MonteCarlo Dropout*
 
 Questa parte e' la base del lavoro di tesi, usando la `base_pipeline` di ARIEL.
 Si utilizza un modello di *MonteCarlo Dropout* per le predizioni, ed effettuiamo le validazioni con `tqdm` e:
@@ -30,7 +34,7 @@ Questo modello e' la base del lavoro di tesi, lavorando unicamente con gli spett
 ---
 
 # SecondaParte:
-> Gaussian Mixture Model
+> Clustering *Gaussian Mixture Model*
 
 Questa parte e' la principale del lavoro di tesi, e utilizza il `Gaussian Mixture Model` per eseguire un **doppio clustering**, prima sui dati *ausiliari* (raggio, temperatura, massa,..), e successivamente sugli spettri.
 L'algoritmo utilizza la coppia (K1,K2), per eseguire i due clustering, ricavata mediante `Bayesian Information Criterion`, che ritorna il modello con minimo B.I.C. tra tutti i modelli disponibili, e nel nostro caso utilizza (19,15) come coppia.
