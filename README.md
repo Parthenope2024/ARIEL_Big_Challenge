@@ -29,7 +29,7 @@ Questo modello e' la base del lavoro di tesi, lavorando unicamente con gli spett
 
 ---
 
-SecondaParte:
+# SecondaParte:
 > Gaussian Mixture Model
 
 Questa parte e' la principale del lavoro di tesi, e utilizza il `Gaussian Mixture Model` per eseguire un **doppio clustering**, prima sui dati *ausiliari* (raggio, temperatura, massa,..), e successivamente sugli spettri.
